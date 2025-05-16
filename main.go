@@ -11,9 +11,9 @@ func healthHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/health", healthHandler)
-	fmt.Println("Starting server on :8080...")
-	if err := http.ListenAndServe(":8080", nil); err != nil {
+	http.HandleFunc("api/health", healthHandler)
+	fmt.Println("Starting server on :7080...")
+	if err := http.ListenAndServe(":7080", nil); err != nil {
 		log.Fatalf("Server failed: %v", err)
 	}
 }
